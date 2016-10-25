@@ -1,9 +1,6 @@
-<h1><%=@garment.name.capitalize%></h1>
+<h1><%= @garment.name.capitalize %></h1>
 <table>
   <thead>
-    <td>
-      Name
-    </td>
     <td>
       Color
     </td>
@@ -25,13 +22,13 @@
       <%= @garment.material %>
     </td>
     <td>
-      <%= @garment.price %>
+      $<%= @garment.price %>0
     </td>
     <td>
-      <%= @garment.cool %>
-      Totally!
+      <% if @garment.cool %>
+        Totally!
       <% else %>
-      Nah, Bruh,
+        Nah, bruh.
       <% end %>
     </td>
   </tbody>
